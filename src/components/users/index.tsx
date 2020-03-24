@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import container, { MapDispatchToProps, MapStateToProps } from "./container";
-import { User } from "../../reducers/types/user";
 
 export type Props = MapDispatchToProps & MapStateToProps;
 
