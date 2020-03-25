@@ -24,9 +24,8 @@ export interface MapStateToProps {
 }
 
 export const mapStateToProps = (state: StoreState): MapStateToProps => {
-  console.log(`states=======`, state);
   return {
-    user: state.users
+    user: state.user
   };
 };
 export const container = connect(mapStateToProps, mapDispatchToProps);

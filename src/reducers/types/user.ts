@@ -28,5 +28,5 @@ export interface User {
 }
 
 export interface UserState {
-  users: Array<User>;
+  userList: Array<User>;
 }
