@@ -3,11 +3,12 @@ import { PostState, Post } from "../../reducers/types/post";
 import { Action } from "redux";
 import { StoreState } from "../../store/storeType";
 import { connect } from "react-redux";
-import { getAllPost, getSinglePost } from "../../actions/post";
+import { getAllPost, getSinglePost, createPost } from "../../actions/post";
 
 export interface MapDispatchToProps {
   getAllPost: () => void;
   getSinglePost: (id: string) => void;
+  createPost: (post: Post) => void;
 }
 
 export const mapDispatchToProps = (
@@ -15,7 +16,8 @@ export const mapDispatchToProps = (
 ): MapDispatchToProps => {
   return {
     getAllPost: () => dispatch(getAllPost()),
-    getSinglePost: (id: string) => dispatch(getSinglePost(id))
+    getSinglePost: (id: string) => dispatch(getSinglePost(id)),
+    createPost: (post: Post) => dispatch(createPost(post))
   };
 };
 

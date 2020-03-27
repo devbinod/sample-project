@@ -1,5 +1,6 @@
 import { PostState } from "../types/post";
-
+var yesterDate = new Date();
+yesterDate.setDate(yesterDate.getDate() - 1);
 export const mockPost: PostState = {
   post: {
     description: "This is test",
@@ -10,6 +11,7 @@ export const mockPost: PostState = {
   },
   posts: [
     {
+      _id: "1",
       description: "This is test1",
       postType: "Text Post",
       published: true,
@@ -17,13 +19,15 @@ export const mockPost: PostState = {
       createdAt: new Date()
     },
     {
+      _id: "2",
       description: "This is test2",
       postType: "Text Post",
       published: true,
       title: "Sample post2",
-      createdAt: new Date()
+      createdAt: yesterDate
     },
     {
+      _id: "3",
       description: "This is test3",
       postType: "Video Post",
       published: true,
@@ -32,11 +36,12 @@ export const mockPost: PostState = {
       videoUrl: "https://youtube.com"
     },
     {
+      _id: "4",
       description: "This is test4",
       postType: "Video Post",
       published: true,
       title: "Sample post4",
-      createdAt: new Date(),
+      createdAt: yesterDate,
       videoUrl: "https://youtube.com"
     }
   ]

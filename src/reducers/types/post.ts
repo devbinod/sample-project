@@ -1,9 +1,13 @@
+export type PostType = "Text Post" | "Video Post";
+
 export interface Post {
+  [key: string]: any;
+  _id?: string;
   title: string;
-  postType: string;
+  postType: PostType;
   description: string;
   videoUrl?: string;
-  published: boolean;
+  published?: boolean;
   createdAt?: Date;
 }
 
